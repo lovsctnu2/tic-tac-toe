@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Let's Play Game!</title>
+  </head>
+  <body>
+    <main>
+      <!-- Judul -->
+      <section class="game-title">
+        <h1>Tic Tac Toe!</h1>
+      </section>
+
+      <!-- Giliran Main -->
+      <section class="game-player">
+        <h2>Player <span class="player-turn">X</span>'s Turn</h2>
+      </section>
+
+      <!-- Papan Game -->
+      <section class="game-arena">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+      </section>
+
+      <!-- Hasil Permainan -->
+      <section
+        class="game-result announcer hide"
+        aria-live="polite"
+        aria-atomic="true"
+      ></section>
+
+      <!-- Reset -->
+      <section class="game-reset">
+        <button id="reset">Restart</button>
+      </section>
+    </main>
+  </body>
+</html>

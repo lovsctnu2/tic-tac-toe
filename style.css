@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  --color-player-x: rgb(255, 0, 119);
+  --color-player-o: rgb(0, 119, 255);
+}
+
+/* judul */
+.game-title h1 {
+  font-size: 3em;
+  font-weight: 800;
+  text-align: center;
+  color: rgb(17, 35, 134);
+  margin-top: 1em;
+}
+
+/* giliran main */
+.game-player {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.hide {
+  display: none;
+}
+
+/* PAPAN GAME */
+/* kerangka papan */
+.game-arena {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  max-width: 300px;
+}
+/* style kotak papan*/
+.tile {
+  border: 4px solid rgb(17, 35, 134);
+  border-radius: 20px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  min-width: 100px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+}
+/* style kotak ketika mouse masuk*/
+.tile:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* rangkaian kotak yang bikin menang */
+.tile.win {
+  background-color: #c2d7ff;
+}
+
+/* style player */
+.playerX {
+  color: var(--color-player-x);
+  font-weight: 800;
+}
+.playerO {
+  color: var(--color-player-o);
+  font-weight: 800;
+}
+
+/* pengumuman pemenang */
+.game-result {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 1em;
+}
+
+/* reset */
+.game-reset {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#reset {
+  color: rgb(255, 255, 255);
+  background-color: rgb(177, 21, 21);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#reset:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+}
